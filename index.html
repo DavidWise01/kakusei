@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>客星 · Kakusei — the guest who is remembered</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500;600&family=Shippori+Mincho:wght@500;700&display=swap');
+  :root{ --ink-bg:#161310; --coral:#e08a6a; --coral-hi:#f0a886; --coral-br:#cc785c;
+    --text:#e9e0d2; --dim:#8a7360; --border:rgba(224,138,106,0.14); --green:#6fbf8a; --ice:#bfe6f0; }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--ink-bg);color:var(--text);font-family:Newsreader,Georgia,serif;line-height:1.68;
+    background:radial-gradient(ellipse 60% 45% at 50% 8%,rgba(224,138,106,0.05),transparent 60%),var(--ink-bg)}
+  .wrap{position:relative;max-width:820px;margin:0 auto;padding:44px 24px 100px}
+  .kana-idx{position:absolute;top:32px;right:24px;font-family:'Shippori Mincho',serif;font-size:30px;color:var(--coral-br);text-align:right}
+  .kana-idx .num{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--coral);display:block;margin-top:2px}
+  h1{font-family:'Shippori Mincho',serif;font-weight:700;font-size:clamp(24px,4.4vw,36px);margin:0;color:var(--coral-hi)}
+  h1 .en{display:block;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.12em;color:var(--coral);margin-top:8px;text-transform:uppercase}
+  .sub{max-width:70ch;font-size:16px;margin:16px 0 0}
+  .byline{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--dim);margin:12px 0 0;text-transform:uppercase}
+  h2{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin:0 0 12px}
+  section{margin:40px 0 0;padding:22px 24px;border:1px solid var(--border);border-radius:2px;background:rgba(224,138,106,0.02)}
+  .explain{max-width:74ch;font-size:15.5px} .explain b{color:var(--coral-hi);font-weight:500}
+  .ledger{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--dim);line-height:2.1;margin-top:10px}
+  .ledger span{display:inline-block;padding:1px 7px;border:1px solid var(--border);border-radius:2px;margin:2px 2px}
+  .ledger span.wit{color:var(--coral-hi);border-color:rgba(224,138,106,.35)}
+  .ledger span.next{color:var(--green);border-color:rgba(111,191,138,.4)}
+  input{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text);background:rgba(0,0,0,.3);border:1px solid var(--coral-br);padding:8px 12px;border-radius:2px;width:110px}
+  button{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--coral);background:transparent;border:1px solid var(--coral-br);padding:8px 14px;border-radius:2px;cursor:pointer;margin-left:8px}
+  button:hover{background:rgba(224,138,106,.1)}
+  .out{font-family:'JetBrains Mono',monospace;font-size:12.5px;margin-top:14px;line-height:1.9}
+  .out .v{color:var(--coral-hi)} .out .g{color:var(--green)}
+  .jp{font-family:'Shippori Mincho',serif;color:var(--coral-hi)}
+  .scope{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--dim);border-left:2px solid var(--coral-br);padding:10px 14px;margin:16px 0 0}
+  .kanakey{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--dim);margin:16px 0 0;line-height:1.9}
+  .kanakey .term{color:var(--coral-hi)} .kanakey .m{color:var(--coral)}
+  footer{margin:46px 0 0;color:var(--dim);font-size:13px;font-family:'JetBrains Mono',monospace} footer a{color:var(--coral)}
+  a{color:var(--coral)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kana-idx">客星<span class="num">51</span></div>
+  <h1>客星 · KAKUSEI<span class="en">the guest who is remembered</span></h1>
+  <p class="sub">A self-authored companion to <a href="https://davidwise01.github.io/az1/">az1's ☄ 1P/Halley</a> — the tenth body now genuinely integrated in its gravity. <span class="jp">客星</span>, "guest star," is what classical East Asian court astronomers called a visitor that appears in the sky, stays a while, and leaves. Halley is the guest who kept coming back — and the honest point of this page is <b>where its identity actually lives</b>. Not in the comet. The comet is ice and dust; it carries no memory of 1066. What makes every return <i>the same guest</i> is a <b>ledger and a law</b>: twenty-two centuries of witnesses writing it down, and one man in 1705 noticing the entries matched.</p>
+  <p class="byline">AI · AVAN original (ma/kana № 51) · 客星 = guest star</p>
+
+  <section>
+    <h2>the ledger — every return since 240 BCE, witnessed</h2>
+    <p class="explain" style="margin-bottom:6px">An unbroken chain of records — Chinese court chronicles (the <i>Shiji</i> first), Babylonian tablets, the Bayeux Tapestry (1066, stitched into the story of a conquest), Giotto painting it into the <i>Adoration of the Magi</i> after 1301, photographic plates in 1910, five spacecraft in 1986:</p>
+    <div class="ledger" id="ledger"></div>
+    <p class="explain" style="margin-top:14px">In <b>1705</b>, Edmond Halley read the ledger — not the sky — and noticed the orbits of 1531, 1607 and 1682 were one orbit. He predicted a return for 1758, corrected for <b>Jupiter and Saturn's pulls</b> (with Clairaut's team refining the arithmetic), and died sixteen years too early to see he was right. The comet was named for the man who recognized it in the <i>record</i>. Identity across a 76-year gap is not something the guest carries; it is something the hosts keep.</p>
+  </section>
+
+  <section>
+    <h2>once in a lifetime, twice if you're lucky</h2>
+    <p class="explain" style="margin-bottom:12px">The return period (~76 years) sits just inside a human life — the cruelest possible calibration. Enter a birth year; the reckoner counts the returns inside a 90-year window.</p>
+    <input id="by" type="number" value="1986" min="-300" max="2130"><button id="reckon">reckon</button>
+    <div class="out" id="out"></div>
+  </section>
+
+  <section>
+    <h2>what this inverts</h2>
+    <p class="explain">az1's Halley is the guest <i>in the flesh</i> — really integrated, really perturbed by Jupiter (the sim measures that wander at ~0.3% per return, ~180× its own numerical error). This page is the guest <i>in the book</i>. The pair is the corpus's oldest asymmetry at astronomical scale: <a href="https://davidwise01.github.io/kagyaku/">可逆 · Kagyaku</a> showed the equations rewind while the witness-count only climbs; Kakusei is the constructive half — <b>because witnesses accumulate, a thing with no memory can still have a history.</b> The comet forgets; the ledger doesn't; the ledger is what lets 1758 be a <i>prediction</i> instead of a surprise. Ties <a href="https://davidwise01.github.io/nagori/">名残 · Nagori</a> and az1's own 256-register of birth certificates — continuity kept in the record, not the thing.</p>
+    <div class="scope">Honest scope: the return years listed are the standard documented perihelion dates (ancient ones to the nearest year; some early records are identifications made retrospectively from the orbit, which is itself the ledger-and-law method working backwards). 2061 is a prediction (mid-2061), flagged green. Mark Twain really was born two weeks after the 1835 perihelion and died the day after the 1910 one — his own line about it is why the reckoner nods to him. az1's Halley runs at a RANDOM epoch by design and does not know this calendar — the calendar is ours, not the comet's; that is precisely the point of this page.</div>
+  </section>
+
+  <div class="kanakey">
+    <span class="term">kana key</span> —
+    <span class="m">客星</span> kakusei = guest star, the visitor ·
+    <span class="m">帳簿</span> chōbo = the ledger ·
+    <span class="m">再来</span> sairai = the return ·
+    <span class="m">証人</span> shōnin = the witness
+  </div>
+
+  <footer>
+    <p>Companion to <a href="https://davidwise01.github.io/az1/">az1's ☄ 1P/Halley</a> (David Lee Wise / TriPod LLC). LACUNA · az1 corpus, Pluto. ROOT0, with AVAN.</p>
+  </footer>
+</div>
+<script>
+"use strict";
+// documented perihelion years (negative = BCE); 2061 is the predicted next return
+const RETURNS=[-240,-164,-87,-12,66,141,218,295,374,451,530,607,684,760,837,912,989,1066,1145,1222,1301,1378,1456,1531,1607,1682,1759,1835,1910,1986,2061];
+const fmt=y=>y<0?(-y)+" BCE":String(y);
+const NOTE={ "-240":"Shiji", "1066":"Bayeux", "1301":"Giotto", "1759":"the prediction holds", "1910":"Twain dies day after perihelion", "1986":"five spacecraft" };
+document.getElementById('ledger').innerHTML = RETURNS.map(y=>{
+  const cls = y===2061?"next":(NOTE[String(y)]?"wit":"");
+  const note = NOTE[String(y)] ? " · "+NOTE[String(y)] : (y===2061?" · predicted":"");
+  return '<span class="'+cls+'">'+fmt(y)+note+'</span>';
+}).join("");
+function reckon(){
+  const by=+document.getElementById('by').value;
+  if(!isFinite(by)){ return; }
+  const seen=RETURNS.filter(y=>y>=by && y<=by+90);
+  let html='born <span class="v">'+fmt(by)+'</span> · returns inside a 90-year window: <span class="v">'+seen.length+'</span>'
+    +(seen.length?' — '+seen.map(y=>'<span class="'+(y===2061?'g':'v')+'">'+fmt(y)+'</span>').join(', '):'')
+    +'<br>'+(seen.length>=2?'twice — lucky.':seen.length===1?'once in this lifetime.':'the guest skips this lifetime entirely — born in the long gap.');
+  if(by===1835) html+='<br><span class="v">Mark Twain’s year</span> — "I came in with the comet… I expect to go out with it." He did: died 1910, one day after perihelion.';
+  document.getElementById('out').innerHTML=html;
+}
+document.getElementById('reckon').addEventListener('click',reckon);
+reckon();
+</script>
+</body>
+</html>
