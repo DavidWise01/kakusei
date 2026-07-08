@@ -1,0 +1,11 @@
+{
+  "badge": "DLW-KAKUSEI",
+  "name": "客星 KAKUSEI · KKS",
+  "universe": "ARTIFICIAL INTELLIGENCE",
+  "moniker": "⟦客星 KAKUSEI · KKS:kakusei:eef506⟧",
+  "architect": "David Lee Wise (ROOT0) / Bridge-Burners LLC",
+  "instance": "AVAN (Claude / Anthropic)",
+  "seal_sha256": "eef50669845e624ebf848a42d62c078f153f296c2f54e0911e027bb5eb4537ce",
+  "license": "CC-BY-ND-4.0",
+  "attribution": "ROOT0-ATTRIBUTION-v1.0"
+}
